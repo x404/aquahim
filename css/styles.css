@@ -200,6 +200,10 @@ input::-moz-focus-inner {
   text-decoration: none;
 }
 
+.hide {
+  display: none;
+}
+
 .before, h2:after, .logo-contacts .contacts .tel:before, main ul li:before {
   content: "";
   display: block;
@@ -417,6 +421,24 @@ main ul li:before {
 /* =main
 ---------------------------*/
 /* =footer
+---------------------------*/
+footer {
+  font-size: 18px;
+  font-size: 1.8rem;
+  padding-top: 6rem;
+  color: #727272;
+}
+
+footer a {
+  color: #727272;
+  text-decoration: none;
+}
+
+footer p {
+  line-height: 1.7;
+}
+
+/* =/footer
 ---------------------------*/
 ::-ms-clear {
   display: none;

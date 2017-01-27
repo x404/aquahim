@@ -115,6 +115,10 @@ input::-moz-focus-inner{
 	}
 }
 
+.hide{
+	display: none;
+}
+
 
 @mixin sprite($x:0, $y:0){
 	background-image: url(../images/sprite.png);
@@ -316,4 +320,17 @@ main{
 
 /* =footer
 ---------------------------*/
-
+footer{
+	@include font-size(1.8);
+	padding-top: 6rem;
+	color: $color5;
+	a{
+		color: $color5;
+		text-decoration: none;
+	}
+	p{
+		line-height: 1.7;
+	}
+}
+/* =/footer
+---------------------------*/
