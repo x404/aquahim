@@ -118,35 +118,35 @@
 
 
 <!-- =products -->
-<section class="products gray">
+<section class="products gray" id="products">
 	<div class="container">
 		<h2>Заказать емкость</h2>
 		<p>Для заказа просчета емкости необходимо определиться с видом крыши и указать желаемый объем емкости в форме отправки заявки. В ближайшее время наш сотрудник свяжется с Вами для уточнения деталей.</p>
 
 		<div class="flex">
 			<div class="item">
-				<h3>Стоимость емкости без крыши</h3>
+				<h3>Стоимость емкости <br>без крыши</h3>
 				<div class="text">
 					<p>Как правило, устанавливаются без крыши емкости для полива (особенно в теплицах), емкости сбора дождевой воды, сбора сточных вод, сезонные резервуары для воды.</p>
 				</div>
 				<div class="price">от <span>50 000 грн.</span></div>
-				<button type="button" class="btn" data-name="Емкость без крыши">ЗАКАЗАТЬ</button>
+				<button type="button" class="btn" data-name="без крыши" data-toggle="modal" data-target="#orderModal">ЗАКАЗАТЬ</button>
 			</div>
 			<div class="item">
-				<h3>Стоимость емкости с металлической крышей</h3>
+				<h3>Стоимость емкости <br>с металлической крышей</h3>
 				<div class="text">
 					<p>Металлическая крыша из оцинкованной стали выдерживает снеговую и ветровую нагрузку. Эта крыша устанавливается на резервуары, которые эксплуатируются круглогодично.</p>
 				</div>
 				<div class="price">от <span>88 200 грн.</span></div>
-				<button type="button" class="btn" data-name="Емкость с металлической крышей">ЗАКАЗАТЬ</button>
+				<button type="button" class="btn" data-name="с металлической крышей" data-toggle="modal" data-target="#orderModal">ЗАКАЗАТЬ</button>
 			</div>
 			<div class="item">
-				<h3>Стоимость емкости с пластиковой крышей</h3>
+				<h3>Стоимость емкости <br>с пластиковой крышей</h3>
 				<div class="text">
 					<p>Пластиковая натяжная крыша устанавливается на емкости, которые эксплуатируются внутри помещения или сезонно на улице.</p>
 				</div>
 				<div class="price">от <span>55 100 грн.</span></div>
-				<button type="button" class="btn" data-name="Емкость с пластиковой крышей">ЗАКАЗАТЬ</button>
+				<button type="button" class="btn" data-name="с пластиковой крышей" data-toggle="modal" data-target="#orderModal">ЗАКАЗАТЬ</button>
 			</div>
 		</div>
 	</div>
@@ -193,6 +193,31 @@
 </footer>
 <!-- =/footer -->
 
+<div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+				<h4 class="modal-title">ЗАКАЗ ЕМКОСТИ</h4>
+				<span class="subtitle">с металлической крышей</span>
+			</div>
+			<div class="modal-body">
+				<form action="#" method="post">
+					<fieldset>
+						<input name="volume" type="text" class="form-control" value="" placeholder="Объем емкости" />
+						<input name="name" type="text" class="form-control" value="" placeholder="ФИО" />
+						<input name="email" type="email" class="form-control" value="" placeholder="Email" />
+						<input name="tel" type="tel" class="form-control" value="" placeholder="Телефон" />
+						<input type="hidden" name="title" value="" />
+						<button type="button" class="btn">Заказать</button>
+					</fieldset>
+				</form>
+			</div>
+			
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 
 <div id="outdated"></div>
 <link rel="stylesheet" property="stylesheet" href="outdatedbrowser/outdatedbrowser.min.css" />
@@ -203,6 +228,8 @@
 
 <link rel="stylesheet" property="stylesheet" href="css/highslide.css" />
 <script src="js/highslide-with-gallery.packed.js"></script>
+
+<script src="js/modal.min.js"></script>
 
 <script src="http://ajax.microsoft.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery.validate.min.js"><\/script>')</script>

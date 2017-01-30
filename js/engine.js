@@ -25,6 +25,15 @@ $(document).ready(function(){
 	hs.outlineType = 'rounded-white';
 	hs.fadeInOut = true;
 	hs.creditsText = '';
+
+
+	$('.header .btn').click(function(){
+		var target = $('#products');
+		$('html,body').animate({
+			scrollTop: target.offset().top
+		}, 1000);
+		return false;
+	})
 });
 
 // =заглушка для IE
