@@ -519,9 +519,9 @@ footer{
 	position: fixed;
 	padding-top: 7.5rem;
 	padding-bottom: 3.5rem;
-	top: 50px;
+	top: 15%;
 	width: 45%;
-	z-index: 999;
+	z-index: 9999;
 	@include rounded(5px);
 	@include font-size(1.8);
 	a{

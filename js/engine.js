@@ -35,19 +35,34 @@ $(document).ready(function(){
 		return false;
 	});
 
+
+
 	// VALIDATE
-	// форма входа
+	$('#orderModal').on('shown.bs.modal', function(e) {
+		var title = $(e.relatedTarget).data('name');
+		$('#orderModal .subtitle').text(title);
+		$('#orderModal input[name=title]').val(title);
+	});
 
 	$('#order_form .btn').click(function(){
 		$('#order_form').submit();
 	});
 
+	var thank = '<div class="thank text-center"> <div class="modal-dialog1"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button> <h4>Спасибо за Ваш заказ!</h4> <p>Для уточнения деталей наш специалист свяжется с Вами в ближайшее время</p> <br> <p><strong><a href="http://www.emkosti.com.ua" target="_blank">Посетить сайт производителя</a></strong></p> </div> </div>';
+	var errorTxt = 'Возникла ошибка при отправке заявки!';
 	$('#order_form').validate({
 		submitHandler: function(form){
-			// при прохождении валидации, дальнейший код тут (ajax)
-			console.log("Валидация пройдена");
+			strSubmit=$(form).serialize();
+			$.ajax({type: "POST",url: "/order.ajax.php",data: strSubmit,
+				success: function(){
+					$('body').append(thank);
+				}
+			}).fail(function(error){alert(errorTxt)});
 		}
 	});
+
+
+
 
 });
 
