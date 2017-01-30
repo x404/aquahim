@@ -10,6 +10,13 @@ $(document).ready(function(){
 		dots : false,
 		nav : true,
 		navText: ["", ""]
+	});
+
+	$('#foo2').owlCarousel({
+		items : 4,
+		dots : false,
+		nav : true,
+		navText: ["", ""]
 	});	
 
 	hs.graphicsDir = '/images/graphics/';

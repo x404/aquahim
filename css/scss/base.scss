@@ -381,6 +381,7 @@ main{
 		padding: 2rem 0 5rem;
 		text-align: center;
 	}
+
 }
 /* =/video
 ---------------------------*/
@@ -433,6 +434,41 @@ main{
 	}
 }
 /* =/products
+---------------------------*/
+
+
+/* =reviews
+---------------------------*/
+.reviews{
+	img{
+		border: 3px solid $color6;
+		@include rounded(.5rem);
+		vertical-align: top;
+	}
+
+	.owl-carousel{
+		.owl-item{
+			text-align: center;
+		}
+		.owl-controls{
+			top: 163px;
+			.owl-nav{
+				.owl-prev{
+					left: -68px;
+				}
+				.owl-next{
+					right: -66px;
+				}
+			}
+		}
+	}
+
+	h2{
+		margin-bottom: 8.7rem;
+	}
+
+}
+/* =/reviews
 ---------------------------*/
 
 

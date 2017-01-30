@@ -588,6 +588,37 @@ main ul li:before {
 
 /* =/products
 ---------------------------*/
+/* =reviews
+---------------------------*/
+.reviews img {
+  border: 3px solid #f7f8fa;
+  -webkit-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  vertical-align: top;
+}
+
+.reviews .owl-carousel .owl-item {
+  text-align: center;
+}
+
+.reviews .owl-carousel .owl-controls {
+  top: 163px;
+}
+
+.reviews .owl-carousel .owl-controls .owl-nav .owl-prev {
+  left: -68px;
+}
+
+.reviews .owl-carousel .owl-controls .owl-nav .owl-next {
+  right: -66px;
+}
+
+.reviews h2 {
+  margin-bottom: 8.7rem;
+}
+
+/* =/reviews
+---------------------------*/
 /* =footer
 ---------------------------*/
 footer {
