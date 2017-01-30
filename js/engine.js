@@ -25,6 +25,28 @@ $(document).ready(function(){
 	hs.outlineType = 'rounded-white';
 	hs.fadeInOut = true;
 	hs.creditsText = '';
+	hs.restoreTitle = '';
+	hs.previousTitle = 'Назад (стрелка влево)';
+	hs.nextTitle = 'Вперед (стрелка вправо)';
+	hs.closeTitle = 'Закрыть';
+	hs.moveText = 'Переместить';
+	hs.moveTitle = 'Переместить';
+	hs.playTitle = 'Автопросмотр';
+	hs.fullExpandTitle = 'Раскрыть в полный размер (f)';
+
+
+
+
+	hs.addSlideshow({
+		interval:1000,
+		repeat:true,
+		useControls:true,
+		overlayOptions:{
+			opacity:0.75,
+			position:'bottom center',
+			hideOnMouseOut: true
+		}	
+	});
 
 
 	$('.header .btn').click(function(){
