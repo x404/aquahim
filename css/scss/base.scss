@@ -472,13 +472,21 @@ main{
 ---------------------------*/
 
 
+/* =map
+---------------------------*/
+#map{
+	height: 755px;
+}
+/* =/map
+---------------------------*/
+
 
 /* =footer
 ---------------------------*/
 footer{
 	@include font-size(1.8);
-	padding-top: 6rem;
 	color: $color5;
+	padding-top: 5.7rem;
 	a{
 		color: $color5;
 		text-decoration: none;

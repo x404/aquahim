@@ -619,13 +619,21 @@ main ul li:before {
 
 /* =/reviews
 ---------------------------*/
+/* =map
+---------------------------*/
+#map {
+  height: 755px;
+}
+
+/* =/map
+---------------------------*/
 /* =footer
 ---------------------------*/
 footer {
   font-size: 18px;
   font-size: 1.8rem;
-  padding-top: 6rem;
   color: #727272;
+  padding-top: 5.7rem;
 }
 
 footer a {
