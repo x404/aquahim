@@ -5,25 +5,19 @@ $(document).ready(function(){
 	);
 
 
-	$(".slider ul").carouFredSel({
-	    auto    : {
-	    	play: true,
-	        items           : 1,
-	        duration        : 5000
-	    },
-		scroll      : {
-	        fx          : "crossfade"
-	    },
-		pagination  : ".pagination"			
-	});
-
 	$("#foo1").owlCarousel({
-		items : 1,
-		pagination : true,
-		navigation : true,
-		singleItem : true,
-		navigationText: ["", ""]
+		items : 3,
+		dots : false,
+		nav : true,
+		navText: ["", ""]
 	});	
+
+	hs.graphicsDir = '/images/graphics/';
+	hs.align = 'center';
+	hs.transitions = ['expand', 'crossfade'];
+	hs.outlineType = 'rounded-white';
+	hs.fadeInOut = true;
+	hs.creditsText = '';
 });
 
 // =заглушка для IE

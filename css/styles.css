@@ -204,7 +204,8 @@ input::-moz-focus-inner {
   display: none;
 }
 
-.before, h2:after, .logo-contacts .contacts .tel:before, main ul li:before {
+.before, h2:after, .logo-contacts .contacts .tel:before, main ul li:before, .owl-carousel .owl-controls .owl-nav .owl-prev:after,
+.owl-carousel .owl-controls .owl-nav .owl-next:after, .projects .owl-item .lightbox:before, .projects .owl-item .lightbox:after {
   content: "";
   display: block;
   position: absolute;
@@ -354,8 +355,8 @@ input::-moz-focus-inner {
 }
 
 .logo-contacts .contacts .tel a {
-  text-decoration: none;
   color: #fff;
+  text-decoration: none;
 }
 
 /* =/header
@@ -395,29 +396,115 @@ main ul li:before {
 ---------------------------*/
 .owl-carousel .owl-controls {
   position: absolute;
+  top: 255px;
   width: 100%;
-  top: 115px;
 }
 
-.owl-carousel .owl-controls .owl-buttons .owl-prev,
-.owl-carousel .owl-controls .owl-buttons .owl-next {
-  background: url(../images/prevnext.png) no-repeat left top;
-  width: 65px;
-  height: 65px;
+.owl-carousel .owl-controls .owl-nav .owl-prev,
+.owl-carousel .owl-controls .owl-nav .owl-next {
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  background: #0f4e8c url(../images/prevnext.png) no-repeat left top;
+  border: 1px solid #0f4e8c;
+  height: 50px;
   position: absolute;
+  width: 50px;
 }
 
-.owl-carousel .owl-controls .owl-buttons .owl-prev {
-  left: -110px;
+.owl-carousel .owl-controls .owl-nav .owl-prev:after,
+.owl-carousel .owl-controls .owl-nav .owl-next:after {
+  background: url(../images/arrow.png) no-repeat left -21px;
+  height: 21px;
+  left: 16px;
+  top: 14px;
+  width: 13px;
 }
 
-.owl-carousel .owl-controls .owl-buttons .owl-next {
+.owl-carousel .owl-controls .owl-nav .owl-prev:hover,
+.owl-carousel .owl-controls .owl-nav .owl-next:hover {
+  background-color: #fff;
+}
+
+.owl-carousel .owl-controls .owl-nav .owl-prev:hover:after,
+.owl-carousel .owl-controls .owl-nav .owl-next:hover:after {
+  background-position: left top;
+}
+
+.owl-carousel .owl-controls .owl-nav .owl-prev {
+  left: -60px;
+}
+
+.owl-carousel .owl-controls .owl-nav .owl-prev:after {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  left: 16px;
+  top: 14px;
+}
+
+.owl-carousel .owl-controls .owl-nav .owl-next {
   background-image: url(../images/sprite.png);
   background-repeat: no-repeat;
   background-position: 0 0;
-  right: -110px;
+  right: -60px;
 }
 
+.owl-carousel .owl-controls .owl-nav .owl-next:after {
+  left: 19px;
+}
+
+/* =projects
+---------------------------*/
+.projects .owl-item {
+  text-align: center;
+}
+
+.projects .owl-item a {
+  display: inline-block;
+  margin-bottom: 1.8rem;
+}
+
+.projects .owl-item .lightbox {
+  position: relative;
+}
+
+.projects .owl-item .lightbox:before, .projects .owl-item .lightbox:after {
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: calc(100%);
+}
+
+.projects .owl-item .lightbox:before {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.projects .owl-item .lightbox:after {
+  opacity: 0;
+  z-index: 999;
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+.projects .owl-item .lightbox:hover:before {
+  background: rgba(15, 78, 140, 0.25);
+  z-index: 99;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.projects .owl-item .lightbox:hover:after {
+  background: url(../images/zoom.png) no-repeat center center;
+  opacity: 1;
+}
+
+/* =/projects
+---------------------------*/
 /* =main
 ---------------------------*/
 /* =footer

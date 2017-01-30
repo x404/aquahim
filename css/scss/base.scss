@@ -239,8 +239,8 @@ input::-moz-focus-inner{
 			}
 
 			a{
-				text-decoration: none;
 				color: $color2;
+				text-decoration: none;
 			}
 		}
 	}
@@ -278,32 +278,100 @@ main{
 /* =/main
 ---------------------------*/
 
-
 .owl-carousel{
 	.owl-controls{
 		position: absolute;
+		top: 255px;
 		width: 100%;
-		top: 115px;
-		.owl-buttons{
+		.owl-nav{
 			.owl-prev,
 			.owl-next{
-				background: url(../images/prevnext.png) no-repeat left top;
-				width: 65px;
-				height: 65px;
+				@include rounded(50%);
+				@include transition-duration;
+				background: $color3 url(../images/prevnext.png) no-repeat left top;
+				border: 1px solid $color3;
+				height: 50px;
 				position: absolute;
+				width: 50px;
+				&:after{
+					@extend .before;
+					background: url(../images/arrow.png) no-repeat left -21px;
+					height: 21px;
+					left: 16px;
+					top: 14px;
+					width: 13px;
+				}
+				&:hover{
+					&:after{
+						background-position: left top
+					}
+					background-color: $color2;					
+				}
 			}
 			.owl-prev{
-				left: -110px;
+				left: -60px;
+				&:after{
+					@include rotation(180deg);
+					left: 16px;
+					top: 14px;
+				}
 			}
 			.owl-next{
 				@include sprite;
-				// .rotation(180deg);
-				right: -110px;
+				right: -60px;
+				&:after{
+					left: 19px;
+				}
 			}
 		}
 	}
 }
 
+
+
+/* =projects
+---------------------------*/
+.projects{
+	.owl-item{
+		text-align: center;
+		a{
+			display: inline-block;
+			margin-bottom: 1.8rem;
+		}
+		.lightbox{
+			position: relative;
+			&:before,
+			&:after{
+				@extend .before;
+				height: 100%;
+				left: 0;
+				top: 0;
+				width: calc(100%);
+			}
+			&:before{
+				@include transition();
+			}
+			&:after{
+				opacity: 0;
+				z-index: 999;
+				@include transition-param(0.2s, opacity);
+			}
+			&:hover{
+				&:before{
+					background: rgba(15, 78, 140, 0.25);
+					z-index: 99;
+					@include rounded(5px);
+				}
+				&:after{
+					background: url(../images/zoom.png) no-repeat center center;
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+/* =/projects
+---------------------------*/
 
 
 /* =main
