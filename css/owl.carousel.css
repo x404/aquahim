@@ -114,7 +114,6 @@
   user-select: none;
 }
 .owl-carousel .owl-item img {
-  // display: block;
   vertical-align: top;
   -webkit-transform-style: preserve-3d;
 }

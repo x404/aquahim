@@ -9,14 +9,44 @@ $(document).ready(function(){
 		items : 3,
 		dots : false,
 		nav : true,
-		navText: ["", ""]
+		navText: ["", ""],
+		responsive:{
+			0:{
+				items:1,
+				stagePadding: 30
+			},
+			480:{
+				items:2
+			},
+			768:{
+				items:3
+			}	
+		}
 	});
 
 	$('#foo2').owlCarousel({
 		items : 4,
 		dots : false,
 		nav : true,
-		navText: ["", ""]
+		navText: ["", ""],
+		responsive:{
+			0:{
+				items:1,
+				stagePadding: 30
+			},
+			480:{
+				items:2
+			},
+			700:{
+				items:2
+			},
+			900:{
+				items:3
+			},
+			1070:{
+				items:4
+			}
+		}
 	});	
 
 	hs.graphicsDir = '/images/graphics/';

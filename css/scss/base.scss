@@ -299,6 +299,7 @@ main{
 				height: 50px;
 				position: absolute;
 				width: 50px;
+				left: 50%;
 				&:after{
 					@extend .before;
 					background: url(../images/arrow.png) no-repeat left -21px;
@@ -315,7 +316,7 @@ main{
 				}
 			}
 			.owl-prev{
-				left: -60px;
+				margin-left: -620px;
 				&:after{
 					@include rotation(180deg);
 					left: 16px;
@@ -323,7 +324,7 @@ main{
 				}
 			}
 			.owl-next{
-				right: -60px;
+				margin-left: 580px;
 				&:after{
 					left: 19px;
 				}
@@ -461,14 +462,6 @@ main{
 		}
 		.owl-controls{
 			top: 163px;
-			.owl-nav{
-				.owl-prev{
-					left: -68px;
-				}
-				.owl-next{
-					right: -66px;
-				}
-			}
 		}
 	}
 
