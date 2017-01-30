@@ -33,6 +33,7 @@ $(document).ready(function(){
 	hs.moveTitle = 'Переместить';
 	hs.playTitle = 'Автопросмотр';
 	hs.fullExpandTitle = 'Раскрыть в полный размер (f)';
+	hs.loadingText : 'Загрузка...';
 
 
 
