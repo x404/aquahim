@@ -505,7 +505,14 @@ main ul li:before {
 
 /* =/projects
 ---------------------------*/
-/* =main
+/* =video
+---------------------------*/
+.video-item {
+  padding: 2rem 0 5rem;
+  text-align: center;
+}
+
+/* =/video
 ---------------------------*/
 /* =footer
 ---------------------------*/

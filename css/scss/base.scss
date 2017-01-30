@@ -374,15 +374,16 @@ main{
 ---------------------------*/
 
 
-/* =main
+/* =video
 ---------------------------*/
-
-.main{
-	aside{
+.video{
+	&-item{
+		padding: 2rem 0 5rem;
+		text-align: center;
 	}
 }
-
-
+/* =/video
+---------------------------*/
 
 
 
