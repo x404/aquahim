@@ -33,8 +33,38 @@ $(document).ready(function(){
 			scrollTop: target.offset().top
 		}, 1000);
 		return false;
+	});
+
+	// VALIDATE
+	// форма входа
+
+	$('#order_form .btn').click(function(){
+		$('#order_form').submit();
+	});
+
+	$('#order_form').validate({
+		submitHandler: function(form){
+			// при прохождении валидации, дальнейший код тут (ajax)
+			console.log("Валидация пройдена");
+		}
+	});
+
+});
+
+$(document).on('click', 'label.error', function(e){
+	e.preventDefault();
+	$(this).hide();
+});
+
+$(document).on('click', '.thank .close', function(e){
+	e.preventDefault();
+
+	$('.thank').fadeOut('normal', function(){
+		this.remove();
 	})
 });
+
+
 
 // =заглушка для IE
 //event listener: DOM ready
@@ -61,3 +91,28 @@ addLoadEvent(function(){
 	})
 });
 // =/заглушка для IE
+
+
+/*
+ * Translated default messages for the jQuery validation plugin.
+ * Locale: RU
+ */
+jQuery.extend(jQuery.validator.messages, {
+	required: "",
+	remote: "Пожалуйста, введите правильное значение.",
+	email: "",
+	url: "Пожалуйста, введите корректный URL.",
+	date: "Пожалуйста, введите корректную дату.",
+	dateISO: "Пожалуйста, введите корректную дату в формате ISO.",
+	number: "Пожалуйста, введите число.",
+	digits: "Пожалуйста, вводите только цифры.",
+	creditcard: "Пожалуйста, введите правильный номер кредитной карты.",
+	equalTo: "Пожалуйста, введите такое же значение ещё раз.",
+	accept: "Пожалуйста, выберите файл с правильным расширением.",
+	maxlength: jQuery.validator.format("Пожалуйста, введите не больше {0} символов."),
+	minlength: jQuery.validator.format("Пожалуйста, введите не меньше {0} символов."),
+	rangelength: jQuery.validator.format("Пожалуйста, введите значение длиной от {0} до {1} символов."),
+	range: jQuery.validator.format("Пожалуйста, введите число от {0} до {1}."),
+	max: jQuery.validator.format("Пожалуйста, введите число, меньшее или равное {0}."),
+	min: jQuery.validator.format("Пожалуйста, введите число, большее или равное {0}.")
+});
