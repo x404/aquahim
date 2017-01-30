@@ -288,7 +288,7 @@ main{
 			.owl-next{
 				@include rounded(50%);
 				@include transition-duration;
-				background: $color3 url(../images/prevnext.png) no-repeat left top;
+				background: $color3;
 				border: 1px solid $color3;
 				height: 50px;
 				position: absolute;
