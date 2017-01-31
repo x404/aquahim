@@ -1184,14 +1184,49 @@ button.close:hover:before {
   }
 }
 
+@media (max-width: 600px) and (orientation: landscape) {
+  h2 {
+    font-size: 30px;
+    font-size: 3rem;
+  }
+  main ul {
+    margin-left: 1rem;
+  }
+  .video-item iframe {
+    height: 264px !important;
+  }
+  .container {
+    padding-bottom: 2rem;
+  }
+  .products .container {
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 568px) {
+  h2 {
+    font-size: 29px;
+    font-size: 2.9rem;
+  }
+  main {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .video-item iframe {
+    height: 250px !important;
+  }
+  footer .fax {
+    display: block;
+  }
+  .thank {
+    padding-top: 2.5rem;
+  }
+}
+
 @media (max-width: 545px) {
   h1 {
     font-size: 31px;
     font-size: 3.1rem;
-  }
-  h2 {
-    font-size: 29px;
-    font-size: 2.9rem;
   }
   .video-item iframe {
     height: 320px !important;
@@ -1205,26 +1240,46 @@ button.close:hover:before {
   }
 }
 
-@media (max-width: 400px) {
-  main {
-    margin-left: 0;
-    margin-right: 0;
+@media (max-width: 414px) {
+  main ul {
+    margin-left: 3rem;
   }
+  .owl-carousel .owl-controls {
+    display: none;
+  }
+  .video-item {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .video-item iframe {
+    height: 195px !important;
+    width: 94% !important;
+  }
+  .thank {
+    transform: translateX(5%);
+  }
+}
+
+@media (max-width: 400px) {
   main ul {
     margin-left: 0;
   }
   #map {
     height: 250px !important;
   }
-  .owl-carousel .owl-controls {
-    display: none;
-  }
   .products .container,
   .container {
     padding-bottom: 3rem;
   }
-  .video-item {
-    padding-bottom: 2rem;
+  footer .tel {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 375px) {
+  .video-item iframe {
+    height: 180px !important;
+    width: 98% !important;
   }
 }
 
@@ -1261,5 +1316,18 @@ button.close:hover:before {
     padding-top: 4.5rem;
     transform: translateX(2%);
     width: 95%;
+  }
+}
+
+@media (max-width: 320px) {
+  .video-item iframe {
+    height: 155px !important;
+    width: 100% !important;
+  }
+  .thank {
+    transform: translateX(1%);
+    width: 91%;
+    font-size: 16px;
+    font-size: 1.6rem;
   }
 }
