@@ -668,21 +668,22 @@ footer p {
 /* =/footer
 ---------------------------*/
 .thank {
+  font-size: 18px;
+  font-size: 1.8rem;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
   background-color: #fff;
   border: 3px solid #0f4e8c;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
   color: #0f4e8c;
   left: 50%;
   margin-left: -22%;
-  position: fixed;
-  padding-top: 7.5rem;
   padding-bottom: 3.5rem;
+  padding-top: 7.5rem;
+  position: fixed;
   top: 15%;
   width: 45%;
   z-index: 9999;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  font-size: 18px;
-  font-size: 1.8rem;
 }
 
 .thank a {

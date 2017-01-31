@@ -504,19 +504,20 @@ footer{
 
 
 .thank{
+	@include font-size(1.8);
+	@include rounded(5px);
 	background-color: $color2;
 	border: 3px solid $color3;
+	box-shadow: 0 0 15px rgba(0,0,0,.7);
 	color: $color3;
 	left: 50%;
 	margin-left: -22%;
-	position: fixed;
-	padding-top: 7.5rem;
 	padding-bottom: 3.5rem;
+	padding-top: 7.5rem;
+	position: fixed;
 	top: 15%;
 	width: 45%;
 	z-index: 9999;
-	@include rounded(5px);
-	@include font-size(1.8);
 	a{
 		color: $color3;
 		text-decoration: none;

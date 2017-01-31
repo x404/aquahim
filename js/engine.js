@@ -1,10 +1,4 @@
 $(document).ready(function(){
-	$('.categories a img').hover(
-		function(){$(this).stop().animate({opacity: 0.7}, 150);},
-		function(){$(this).delay(50).animate({opacity: 1}, 50);}
-	);
-
-
 	$("#foo1").owlCarousel({
 		items : 3,
 		dots : false,
@@ -66,8 +60,6 @@ $(document).ready(function(){
 	hs.loadingText = 'Загрузка...';
 
 
-
-
 	hs.addSlideshow({
 		interval:1000,
 		repeat:true,
@@ -108,15 +100,12 @@ $(document).ready(function(){
 			strSubmit=$(form).serialize();
 			$.ajax({type: "POST",url: "/order.ajax.php",data: strSubmit,
 				success: function(){
+					$('#orderModal').modal('hide').find('.form-control').val('');
 					$('body').append(thank);
 				}
 			}).fail(function(error){alert(errorTxt)});
 		}
 	});
-
-
-
-
 });
 
 $(document).on('click', 'label.error', function(e){
@@ -126,7 +115,6 @@ $(document).on('click', 'label.error', function(e){
 
 $(document).on('click', '.thank .close', function(e){
 	e.preventDefault();
-
 	$('.thank').fadeOut('normal', function(){
 		this.remove();
 	})
