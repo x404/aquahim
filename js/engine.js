@@ -93,7 +93,7 @@ $(document).ready(function(){
 		$('#order_form').submit();
 	});
 
-	var thank = '<div class="thank text-center"> <div class="modal-dialog1"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button> <h4>Спасибо за Ваш заказ!</h4> <p>Для уточнения деталей наш специалист свяжется с Вами в ближайшее время</p> <br> <p><strong><a href="http://www.emkosti.com.ua" target="_blank">Посетить сайт производителя</a></strong></p> </div> </div>';
+	var thank = '<div class="thank text-center"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button> <h4>Спасибо за Ваш заказ!</h4> <p>Для уточнения деталей наш специалист свяжется с Вами в ближайшее время</p> <br> <p><strong><a href="http://www.emkosti.com.ua" target="_blank">Посетить сайт производителя</a></strong></p> </div>';
 	var errorTxt = 'Возникла ошибка при отправке заявки!';
 	$('#order_form').validate({
 		submitHandler: function(form){
@@ -101,6 +101,8 @@ $(document).ready(function(){
 			$.ajax({type: "POST",url: "/order.ajax.php",data: strSubmit,
 				success: function(){
 					$('#orderModal').modal('hide').find('.form-control').val('');
+					$('body').append('<div class="modal-backdrop fade in"></div>');
+					$('body').addClass('modal-open');
 					$('body').append(thank);
 				}
 			}).fail(function(error){alert(errorTxt)});
@@ -117,6 +119,8 @@ $(document).on('click', '.thank .close', function(e){
 	e.preventDefault();
 	$('.thank').fadeOut('normal', function(){
 		this.remove();
+		$('.modal-backdrop').remove();
+		$('body').removeClass('modal-open');
 	})
 });
 

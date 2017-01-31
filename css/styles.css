@@ -1155,6 +1155,9 @@ button.close:hover:before {
   #map {
     height: 270px;
   }
+  .thank {
+    top: 13%;
+  }
 }
 
 @media (max-width: 667px) and (orientation: landscape) {
@@ -1169,6 +1172,10 @@ button.close:hover:before {
   .thank {
     top: 9%;
     transform: translateX(12%);
+  }
+  .thank {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
 
@@ -1220,7 +1227,10 @@ button.close:hover:before {
     display: block;
   }
   .thank {
-    padding-top: 2.5rem;
+    padding-top: 2rem;
+  }
+  #map {
+    height: 180px;
   }
 }
 
@@ -1330,5 +1340,20 @@ button.close:hover:before {
     width: 91%;
     font-size: 16px;
     font-size: 1.6rem;
+  }
+  .modal-header {
+    padding-top: 37px;
+  }
+  .modal form div {
+    margin-top: 1rem;
+  }
+  .modal .btn {
+    margin-top: 1.5rem;
+  }
+  .modal-body {
+    padding-bottom: 2.5rem;
+  }
+  .thank {
+    transform: translateX(4%);
   }
 }
