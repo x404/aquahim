@@ -989,6 +989,10 @@ button.close:hover:before {
   .reviews .owl-carousel .owl-controls {
     top: 170px;
   }
+  .ie10 .header .container {
+    display: block;
+    padding-bottom: 1rem;
+  }
 }
 
 @media (max-width: 1040px) {

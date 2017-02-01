@@ -1,3 +1,23 @@
 textarea{overflow:hidden}       
-@media \0screen{
+
+
+:root .logo-contacts{
+	overflow: hidden\9;
+}
+
+:root .logo{
+	float: left\9;
+}
+
+:root .header .contacts{
+	float: right\9;
+}
+
+:root .header .download{
+	margin-top: 3rem\9;
+}
+
+:root .products .flex .item{
+	display: inline-block\9;
+	vertical-align: top\9;
 }
